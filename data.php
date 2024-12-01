@@ -1,4 +1,11 @@
 <?php
+   session_start();
+
+   if(!isset($_SESSION['mySession'])){
+       header('location:login.php');
+   }
+   
+
   if(isset($_POST['btnSubmit'])){
     $file = $_FILES['file'];
     $fileName = $file['name'];
@@ -23,7 +30,7 @@
 <?php
     require_once 'nav.php';
   ?>
-  
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

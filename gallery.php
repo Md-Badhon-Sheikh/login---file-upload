@@ -1,4 +1,11 @@
 <?php
+ session_start();
+
+ if(!isset($_SESSION['mySession'])){
+     header('location:login.php');
+ }
+
+// include nav file 
 require_once 'nav.php';
 
 $imgLocation = 'images/';
