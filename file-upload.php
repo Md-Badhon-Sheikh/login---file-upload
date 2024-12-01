@@ -2,7 +2,7 @@
    session_start();
 
    if(!isset($_SESSION['mySession'])){
-       header('location:login.php');
+       header('location:index.php');
    }
    
 
@@ -37,7 +37,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>File Upload Form</title>
-  <link rel="stylesheet" href="styles/file-upload.css">
+  <link rel="stylesheet" href="styles/imageUp.css">
 </head>
 <body>
 

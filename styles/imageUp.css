@@ -1,7 +1,7 @@
 /* styles.css */
 body {
     font-family: Arial, sans-serif;
-    background: #4c4ca3;
+    background: #e3e3e6;
     margin: 0;
     padding: 0;
     /* display: flex; */
@@ -12,7 +12,7 @@ body {
   
   .upload-form {
     margin: 0 auto;
-    margin-top: 30px;
+    /* margin-top: 30px; */
     background: #ffffff;
     padding: 20px 30px;
     border-radius: 8px;

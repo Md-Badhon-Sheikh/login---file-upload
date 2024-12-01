@@ -3,7 +3,7 @@
     session_start();
 
     if(!isset($_SESSION['mySession'])){
-        header('location:login.php');
+        header('location:index.php');
     }
     //  include class.php 
     require_once 'class.php';

@@ -2,7 +2,7 @@
  session_start();
 
  if(!isset($_SESSION['mySession'])){
-     header('location:login.php');
+     header('location:index.php');
  }
 
 // include nav file 
