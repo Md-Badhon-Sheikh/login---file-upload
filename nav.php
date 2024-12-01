@@ -17,7 +17,9 @@
         <ul class="nav-links" id="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="registration.php">Registration</a></li>
-            <li><a href="display.php">Display</a></li>
+            <li><a href="image.php">File Upload</a></li>
+            <li><a href="display.php">Student Information</a></li>
+            <li><a href="gallery.php">Gallery</a></li>
             <li><a href="logout.php">Logout</a></li>
         </ul>
     </nav>

@@ -26,7 +26,6 @@
             $myObject->save();
         }
     }
-
 ?>
 
 <!DOCTYPE html>

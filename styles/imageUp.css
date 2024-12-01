@@ -1,16 +1,18 @@
 /* styles.css */
 body {
     font-family: Arial, sans-serif;
-    background: #f4f4f9;
+    background: #4c4ca3;
     margin: 0;
     padding: 0;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     height: 100vh;
   }
   
   .upload-form {
+    margin: 0 auto;
+    margin-top: 30px;
     background: #ffffff;
     padding: 20px 30px;
     border-radius: 8px;
