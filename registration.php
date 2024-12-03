@@ -73,6 +73,8 @@
             <button type="submit" name="btnSubmit">Register</button>
         </form>
     </div>
-    
+    <?php
+        require_once('footer.php');
+    ?>
 </body>
 </html>

@@ -10,12 +10,12 @@
 
 <body>
     <nav class="navbar">
-        <div class="brand">MyWebsite</div>
+        <div class="brand"><a href="home.php">MyWebsite</a></div>
         <button class="toggle" id="menu-toggle">
             ☰
         </button>
         <ul class="nav-links" id="nav-links">
-            <li><a href="#home">Home</a></li>
+            <li><a href="home.php">Home</a></li>
             <li><a href="registration.php">Registration</a></li>
             <li><a href="file-upload.php">File Upload</a></li>
             <li><a href="display.php">Student Information</a></li>

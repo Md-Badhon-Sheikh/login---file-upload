@@ -58,10 +58,12 @@
       <button type="submit" name="btnSubmit">Upload</button>
     </form>
   </div>
+  <?php
+  echo "<div style='margin-top: 280px;'></div>";
+
+    require_once('footer.php');
+  ?>
 </body>
-<img src="" style="margin:5px; border:2px solid;" alt="">
 </html>
 
-<?php
 
-?>

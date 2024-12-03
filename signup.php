@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 
 require_once 'signupClass.php';
@@ -8,23 +9,26 @@ if (isset($_POST['btnSubmit'])) {
     $password = $_POST['password'];
     $confirm_password = $_POST['confirm-password'];
 
+    if ($password == $confirm_password) {
+        // check old data 
+        $file = file('loginData.txt');
+        foreach ($file as $singleData) {
+            list($signupName) = explode(',', trim($singleData));
 
-    // check old data 
-    $file = file('loginData.txt');
-    foreach ($file as $singleData) {
-        list($signupName) = explode(',', trim($singleData));
-
-        if (trim($name) == $signupName) {
-            $msg = 'This user already exists';
-        } 
-        else {
-            // create a object 
-            $myObject = new Signup($name, $password);
-            $myObject->save();
-            $_SESSION['mySession'] = $name;
-            header('location:registration.php');
-            break;
+            if (trim($name) == $signupName) {
+                $msg = 'This user already exists';
+            } else {
+                // create a object 
+                $myObject = new Signup($name, $password);
+                $myObject->save();
+                $_SESSION['mySession'] = $name;
+                header('location:registration.php');
+                break;
+            }
         }
+    }
+    else{
+        $msgPassword = 'Password are not same';
     }
 }
 
@@ -45,6 +49,7 @@ if (isset($_POST['btnSubmit'])) {
         <form class="signup-form" action="#" method="post">
             <h2>Create an Account</h2>
             <?php
+            echo isset($msgPassword) ? $msgPassword : '';
             echo isset($msg) ? $msg : '';
 
             ?>
