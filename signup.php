@@ -8,21 +8,26 @@
 </head>
 <body>
     <div class="signup-container">
-        <h2>Sign Up</h2>
-        <form action="/submit_signup" method="POST">
+        <form class="signup-form">
+            <h2>Create an Account</h2>
             <div class="form-group">
                 <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
             </div>
-            <button type="submit" class="signup-btn">Sign Up</button>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+            </div>
+            <button type="submit">Sign Up</button>
+            <p>Already have an account? <a href="#">Login here</a></p>
         </form>
     </div>
 </body>
