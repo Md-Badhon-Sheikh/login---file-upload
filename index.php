@@ -49,7 +49,7 @@
                 <input type="password" id="password" name="password" required placeholder="123">
             </div>
             <button type="submit" name="btnSubmit">Login</button>
-            <p class="forgot-password"><a href="#">Forgot password?</a></p>
+            <p class="forgot-password"><a href="signup.php">SignUp?</a></p>
         </form>
     </div>
 </body>
