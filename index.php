@@ -42,11 +42,11 @@
         <form action="#" method="POST">
             <div class="input-group">
                 <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required placeholder="badhon">
+                <input type="text" id="username" name="username" required placeholder="User Name">
             </div>
             <div class="input-group">
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required placeholder="123">
+                <input type="password" id="password" name="password" required placeholder="Password">
             </div>
             <button type="submit" name="btnSubmit">Login</button>
             <p class="forgot-password"><a href="signup.php">SignUp?</a></p>
