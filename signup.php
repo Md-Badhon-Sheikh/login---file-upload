@@ -1,37 +1,40 @@
 <?php
-
-session_start();
-
-require_once 'signupClass.php';
-
 if (isset($_POST['btnSubmit'])) {
-    $name = $_POST['username'];
+    $name = trim($_POST['username']);
     $password = $_POST['password'];
     $confirm_password = $_POST['confirm-password'];
 
-    if ($password == $confirm_password) {
-        // check old data 
+    if ($password === $confirm_password) {
+        
         $file = file('loginData.txt');
-        foreach ($file as $singleData) {
-            list($signupName) = explode(',', trim($singleData));
+        $userExists = false;
 
-            if (trim($name) == $signupName) {
-                $msg = 'This user already exists';
-            } else {
-                // create a object 
-                $myObject = new Signup($name, $password);
-                $myObject->save();
-                $_SESSION['mySession'] = $name;
-                header('location:registration.php');
+        foreach ($file as $singleData) {
+            list($signupName, $storedPassword) = explode(',', trim($singleData));
+
+            if ($name === $signupName) {
+                $userExists = true;
                 break;
             }
         }
-    }
-    else{
-        $msgPassword = 'Password are not same';
+
+        if ($userExists) {
+            $msg = 'This user already exists';
+        } else {
+           
+            $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+
+            $data = $name . ',' . $hashedPassword . PHP_EOL;
+            file_put_contents('loginData.txt', $data, FILE_APPEND);
+            session_start();
+            $_SESSION['mySession'] = $name;
+            header('Location: registration.php');
+            exit;
+        }
+    } else {
+        $msgPassword = 'Passwords do not match';
     }
 }
-
 
 ?>
 <!DOCTYPE html>
