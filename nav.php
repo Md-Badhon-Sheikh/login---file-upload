@@ -10,7 +10,7 @@
 
 <body>
     <nav class="navbar">
-        <div class="brand"><a href="home.php">MyWebsite</a></div>
+        <div class="brand"><a href="home.php">Amar Website</a></div>
         <button class="toggle" id="menu-toggle">
             ☰
         </button>
